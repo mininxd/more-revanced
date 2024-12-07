@@ -18,7 +18,7 @@ arch = "both"
 
 [Music-Extended]
 app-name = "Music"
-patches-source = "mininxd/revanced-patches"
+patches-source = "inotia00/revanced-patches"
 integrations-source = "inotia00/revanced-integrations"
 cli-source = "inotia00/revanced-cli"
 rv-brand = "ReVanced Extended"
@@ -30,7 +30,7 @@ arch = "both"
 [YouTube-Extended]
 # enabled = false
 app-name = "YouTube"
-patches-source = "mininxd/revanced-patches"
+patches-source = "inotia00/revanced-patches"
 integrations-source = "inotia00/revanced-integrations"
 cli-source = "inotia00/revanced-cli"
 rv-brand = "ReVanced Extended"
