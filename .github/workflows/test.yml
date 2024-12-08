@@ -1,0 +1,20 @@
+name: Test Builder
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone rvx-builder repository
+        run: git clone -b revanced-extended https://github.com/inotia00/rvx-builder.git --depth=1 --no-tags
+
+      - name: Navigate to the repository
+        working-directory: rvx-builder
+        run: |
+          npm install
+          npx pkg -t linux-x64,macos-x64,win-x64 -C GZip .
+          ls -a
+          tree .
