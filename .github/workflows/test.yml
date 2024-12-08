@@ -11,6 +11,9 @@ jobs:
       - name: Clone rvx-builder repository
         run: git clone -b revanced-extended https://github.com/inotia00/rvx-builder.git --depth=1 --no-tags
 
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4.1.0
+        
       - name: Navigate to the repository
         working-directory: rvx-builder
         run: |
