@@ -17,7 +17,7 @@ arch = "both"
 
 [Music-Extended]
 app-name = "Music"
-patches-source = "inotia00/revanced-patches"
+patches-source = "mininxd/revanced-patches"
 cli-source = "inotia00/revanced-cli"
 rv-brand = "ReVanced Extended"
 build-mode = "both"
@@ -27,7 +27,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 
 [YouTube-Extended]
 app-name = "YouTube"
-patches-source = "inotia00/revanced-patches"
+patches-source = "mininxd/revanced-patches"
 cli-source = "inotia00/revanced-cli"
 rv-brand = "ReVanced Extended"
 build-mode = "both"
