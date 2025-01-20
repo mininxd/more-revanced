@@ -1,6 +1,6 @@
 {
-  "version": "v19.47.53 (patches: 5.8.1)",
-  "versionCode": 26,
-  "zipUrl": "https://github.com/mininxd/more-revanced/releases/download/26/youtube-revanced-magisk-v19.47.53-all.zip",
+  "version": "v19.47.53 (patches: 5.9.0)",
+  "versionCode": 28,
+  "zipUrl": "https://github.com/mininxd/more-revanced/releases/download/28/youtube-revanced-magisk-v19.47.53-all.zip",
   "changelog": "https://raw.githubusercontent.com/mininxd/more-revanced/update/build.md"
 }
