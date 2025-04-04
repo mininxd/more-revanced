@@ -1,6 +1,16 @@
 enable-magisk-update = true 
 parallel-jobs = 1
 
+[Twitter]
+enabled = true
+apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter"
+build-mode = "apk"
+dpi = "120-640dpi"
+
+[Spotify]
+enabled = true
+uptodown-dlurl = "https://spotify.en.uptodown.com/android"
+
 [Tiktok]
 enabled = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/"
@@ -21,7 +31,32 @@ enabled = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/facebook/"
 build-mode = "apk"
 
-[Photos]
+[Facebook]
+enabled = true
+apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram/"
+build-mode = "apk"
+
+[GooglePhotos]
 enabled = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photos/"
+build-mode = "apk"
+
+[Duolingo]
+enabled = true
+apkmirror-dlurl = "https://www.apkmirror.com/apk/duolingo/duolingo-duolingo/"
+build-mode = "apk"
+
+[Strava]
+enabled = true
+apkmirror-dlurl = "https://www.apkmirror.com/apk/strava-inc/strava-running-and-cycling-gps/"
+build-mode = "apk"
+
+[Photomath]
+enabled = true
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photomath/"
+build-mode = "apk"
+
+[Lightroom]
+enabled = true
+apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom/"
 build-mode = "apk"
