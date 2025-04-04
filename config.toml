@@ -1,7 +1,7 @@
 enable-magisk-update = true 
 parallel-jobs = 1
 
-[Strava]
+[Tiktok]
 enabled = true
-apkmirror-dlurl = "https://www.apkmirror.com/apk/strava-inc/strava-running-and-cycling-gps/"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/"
 build-mode = "apk"
