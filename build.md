@@ -1,3 +1,5 @@
+Facebook: 490.0.0.63.82  
+Instagram: 374.0.0.43.67  
 Photomath: 8.37.0  
 Reddit: 2024.17.0  
 Tiktok: 36.5.4  
