@@ -5,3 +5,13 @@ parallel-jobs = 1
 enabled = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/"
 build-mode = "apk"
+
+[Tumblr]
+enabled = true
+apkmirror-dlurl = "https://www.apkmirror.com/apk/tumblr-inc/tumblr/"
+build-mode = "apk"
+
+[Reddit]
+enabled = true
+apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit/"
+build-mode = "apk"
