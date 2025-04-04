@@ -19,36 +19,43 @@ build-mode = "apk"
 [Tumblr]
 enabled = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/tumblr-inc/tumblr/"
+uptodown-dlurl = "https://tumblr.en.uptodown.com/android"
 build-mode = "apk"
 
 [Reddit]
 enabled = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit/"
 build-mode = "apk"
+uptodown-dlurl = "https://facebook.id.uptodown.com/android"
 
 [Facebook]
 enabled = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/facebook/"
+uptodown-dlurl = "https://facebook.id.uptodown.com/android"
 build-mode = "apk"
 
 [Instagram]
 enabled = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram/"
+uptodown-dlurl = "https://instagram.en.uptodown.com/android"
 build-mode = "apk"
 
 [GooglePhotos]
 enabled = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photos/"
+uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 build-mode = "apk"
 
 [Duolingo]
 enabled = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/duolingo/duolingo-duolingo/"
+uptodown-dlurl = "https://duolingo.en.uptodown.com/android"
 build-mode = "apk"
 
 [Strava]
 enabled = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/strava-inc/strava-running-and-cycling-gps/"
+uptodown-dlurl = "https://strava.en.uptodown.com/android"
 build-mode = "apk"
 
 [Photomath]
@@ -59,4 +66,5 @@ build-mode = "apk"
 [Lightroom]
 enabled = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom/"
+uptodown-dlurl = "https://adobe-lightroom-mobile.en.uptodown.com/android"
 build-mode = "apk"
