@@ -1,8 +1,7 @@
 enable-magisk-update = true 
 parallel-jobs = 1
 
-[Twitter]
+[Strava]
 enabled = true
-apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/strava-inc/"
 build-mode = "apk"
-arch = "universal"
