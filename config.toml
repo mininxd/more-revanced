@@ -5,12 +5,12 @@ parallel-jobs = 1
 enabled = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter"
 build-mode = "apk"
-arch = "universal"
+arch = "all"
 
 [Spotify]
 enabled = true
 uptodown-dlurl = "https://spotify.en.uptodown.com/android"
-arch = "universal"
+arch = "all"
 
 [Tiktok]
 enabled = true
@@ -34,7 +34,7 @@ enabled = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/facebook/"
 uptodown-dlurl = "https://facebook.id.uptodown.com/android"
 build-mode = "apk"
-arch = "universal"
+arch = "all"
 
 [Instagram]
 enabled = true
