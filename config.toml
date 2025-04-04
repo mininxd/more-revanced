@@ -31,7 +31,7 @@ enabled = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/facebook/"
 build-mode = "apk"
 
-[Facebook]
+[Instagram]
 enabled = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram/"
 build-mode = "apk"
