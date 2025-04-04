@@ -1,3 +1,4 @@
+Photomath: 8.37.0  
 Reddit: 2024.17.0  
 Tiktok: 36.5.4  
 
