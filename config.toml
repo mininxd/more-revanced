@@ -3,5 +3,5 @@ parallel-jobs = 1
 
 [Strava]
 enabled = true
-apkmirror-dlurl = "https://www.apkmirror.com/apk/strava-inc/"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/strava-inc/strava-running-and-cycling-gps/"
 build-mode = "apk"
