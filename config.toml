@@ -5,3 +5,4 @@ parallel-jobs = 1
 enabled = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
 build-mode = "apk"
+arch = "universal"
