@@ -6,6 +6,13 @@ parallel-jobs = 1
 
 # you can use rvmm-config-gen to generate a config
 
+[Reddit]
+enabled = true
+build-mode = "apk"
+arch = "both"
+version = "auto"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit/"
+
 [YouTube]
 enabled = false
 build-mode = "both"
@@ -32,9 +39,17 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photos/"
 uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 
 [Spotify]
+build-mode = "apk"
+arch = "both"
+version = "auto"
+enabled = true
 uptodown-dlurl = "https://spotify.en.uptodown.com/android"
 
 [Photomath]
+build-mode = "apk"
+arch = "both"
+version = "auto"
+enabled = true
 apkmirror-durl = "https://www.apkmirror.com/apk/google-inc/photomath/"
 
 # dont build on gh actions (https://github.com/j-hc/revanced-magisk-module/issues/554)
