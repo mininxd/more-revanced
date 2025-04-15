@@ -26,24 +26,3 @@ arch = "both"
 version = "auto"
 enabled = true
 uptodown-dlurl = "https://spotify.en.uptodown.com/android"
-
-[SpotifyLite]
-build-mode = "apk"
-arch = "both"
-version = "auto"
-enabled = true
-uptodown-dlurl = "https://spotify-lite.en.uptodown.com/android"
-
-[SoundCloud]
-build-mode = "apk"
-arch = "both"
-version = "auto"
-enabled = true
-uptodown-dlurl = "https://soundcloud.en.uptodown.com/android"
-
-[Photomath]
-build-mode = "apk"
-arch = "both"
-version = "auto"
-enabled = true
-apkmirror-durl = "https://www.apkmirror.com/apk/google-inc/photomath/"
