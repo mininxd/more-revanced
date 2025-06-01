@@ -20,9 +20,23 @@ version = "auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photos/"
 uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 
+[Photomath]
+build-mode = "apk"
+arch = "both"
+version = "auto"
+enabled = true
+uptodown-dlurl = "https://photomath.en.uptodown.com/android"
+
 [Spotify]
 build-mode = "apk"
 arch = "both"
 version = "auto"
 enabled = true
 uptodown-dlurl = "https://spotify.en.uptodown.com/android"
+
+[Tiktok]
+build-mode = "apk"
+arch = "both"
+version = "auto"
+enabled = true
+uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
