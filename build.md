@@ -1,4 +1,7 @@
-GooglePhotos (arm64-v8a): 7.31.0.763184430  
+GooglePhotos (arm64-v8a): 7.31.0.764984055  
+GooglePhotos (arm-v7a): 7.31.0.764984055  
+Photomath (arm64-v8a): 8.44.0  
+Photomath (arm-v7a): 8.44.0  
 Reddit (arm64-v8a): 2024.17.0  
 Reddit (arm-v7a): 2024.17.0  
 
