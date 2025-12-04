@@ -15,5 +15,5 @@ arch = "both"
 version = "latest"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/strava-inc/strava-run-bike-hike-2"
 uptodown-dlurl = "https://strava.en.uptodown.com/android"
-riplib = true
-include-stock = true
+# riplib = true
+# include-stock = true
