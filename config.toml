@@ -9,7 +9,7 @@ parallel-jobs = 1
 [Strava]
 enabled = true
 patches-source = "ReVanced/revanced-patches"
-cli-source = "ReVanced/revanced-cli"
+cli-source = "inotia00/revanced-cli"
 build-mode = "apk"
 arch = "both"
 version = "auto"
