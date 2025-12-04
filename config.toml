@@ -6,37 +6,9 @@ parallel-jobs = 1
 
 # you can use rvmm-config-gen to generate a config
 
-[Reddit]
+[Strava]
 enabled = true
 build-mode = "apk"
 arch = "both"
 version = "auto"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit/"
-
-[GooglePhotos]
-build-mode = "apk"
-arch = "both"
-version = "auto"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photos/"
-uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
-
-[Photomath]
-build-mode = "apk"
-arch = "both"
-version = "auto"
-enabled = true
-uptodown-dlurl = "https://photomath.en.uptodown.com/android"
-
-[Spotify]
-build-mode = "apk"
-arch = "both"
-version = "auto"
-enabled = true
-uptodown-dlurl = "https://spotify.en.uptodown.com/android"
-
-[Tiktok]
-build-mode = "apk"
-arch = "both"
-version = "auto"
-enabled = true
-uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/strava-inc/strava-run-bike-hike-2"
