@@ -6,14 +6,14 @@ parallel-jobs = 1
 
 # you can use rvmm-config-gen to generate a config
 
-[Strava]
+[strava]
 enabled = true
 patches-source = "ReVanced/revanced-patches"
 cli-source = "inotia00/revanced-cli"
 build-mode = "apk"
 arch = "both"
 version = "latest"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/strava-inc/strava-run-bike-hike-2"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/strava-inc/strava-run-bike-hike-2"
 uptodown-dlurl = "https://strava.en.uptodown.com/android"
 riplib = true
 include-stock = true
