@@ -26,7 +26,7 @@ version = "beta"
 uptodown-dlurl = "https://strava.en.uptodown.com/android"
 #apkmirror-dlurl = "https://www.apkmirror.com/apk/strava-inc/strava-run-bike-hike-2"
 
-[strava-module]
+[strava-magisk]
 enabled = true
 patches-source = "ReVanced/revanced-patches"
 cli-source = "inotia00/revanced-cli"
@@ -36,7 +36,7 @@ version = "latest"
 uptodown-dlurl = "https://strava.en.uptodown.com/android"
 #apkmirror-dlurl = "https://www.apkmirror.com/apk/strava-inc/strava-run-bike-hike-2"
 
-[strava-module-beta]
+[strava-magisk-beta]
 enabled = true
 patches-source = "ReVanced/revanced-patches"
 cli-source = "inotia00/revanced-cli"
