@@ -14,8 +14,8 @@ build-mode = "both"
 arch = "both"
 version = "latest"
 uptodown-dlurl = "https://strava.en.uptodown.com/android"
-riplib = true
-include-stock = true
+apkmirror-dlurl = "https://www.apkmirror.com/apk/strava-inc/strava-run-bike-hike-2"
+version = "latest"
 
 [strava-beta]
 enabled = true
@@ -25,5 +25,4 @@ build-mode = "both"
 arch = "both"
 version = "beta"
 uptodown-dlurl = "https://strava.en.uptodown.com/android"
-riplib = true
-include-stock = true
+apkmirror-dlurl = "https://www.apkmirror.com/apk/strava-inc/strava-run-bike-hike-2"
