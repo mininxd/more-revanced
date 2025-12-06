@@ -204,24 +204,7 @@ _req() {
 		mv -f "$dlp" "$op"
 	fi
 }
-req() {
-    sleep $((RANDOM % 3 + 1))  # Random delay 1-3 seconds to avoid rate limiting
-    _req "$1" "$2" \
-        -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
-        -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7" \
-        -H "Accept-Language: en-US,en;q=0.9" \
-        -H "Accept-Encoding: gzip, deflate, br" \
-        -H "Connection: keep-alive" \
-        -H "Upgrade-Insecure-Requests: 1" \
-        -H "Sec-Fetch-Dest: document" \
-        -H "Sec-Fetch-Mode: navigate" \
-        -H "Sec-Fetch-Site: none" \
-        -H "Cache-Control: max-age=0" \
-        -H "DNT: 1" \
-        -H "Sec-Ch-Ua: \"Not_A Brand\";v=\"8\", \"Chromium\";v=\"120\", \"Google Chrome\";v=\"120\"" \
-        -H "Sec-Ch-Ua-Mobile: ?0" \
-        -H "Sec-Ch-Ua-Platform: \"Windows\"";
-}
+req() { _req "$1" "$2" -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0"; }
 gh_req() { _req "$1" "$2" -H "$GH_HEADER"; }
 gh_dl() {
 	if [ ! -f "$1" ]; then
