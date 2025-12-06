@@ -2,10 +2,6 @@ strava (arm64-v8a): 440.12
 strava (arm-v7a): 440.12  
 strava-beta (arm64-v8a): 440.12  
 strava-beta (arm-v7a): 440.12  
-strava-module (arm64-v8a): 440.12  
-strava-module (arm-v7a): 440.12  
-strava-module-beta (arm64-v8a): 440.12  
-strava-module-beta (arm-v7a): 440.12  
 
 Install [Microg](https://github.com/ReVanced/GmsCore/releases) for non-root YouTube and YT Music APKs  
 Use [zygisk-detach](https://github.com/j-hc/zygisk-detach) to detach root ReVanced YouTube and YT Music from Play Store  
