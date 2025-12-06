@@ -263,6 +263,61 @@ isoneof() {
 	return 1
 }
 
+# Function to convert APKM (Android App Bundle) to APK
+convert_apkm_to_apk() {
+	local apkm_file=$1
+	local apk_output=$2
+
+	pr "Converting APKM to APK: ${apkm_file} -> ${apk_output}"
+	gh_dl "$TEMP_DIR/apkeditor.jar" "https://github.com/REAndroid/APKEditor/releases/download/V1.4.2/APKEditor-1.4.2.jar" >/dev/null || return 1
+
+	if [ ! -f "$apkm_file" ]; then
+		epr "APKM file not found: $apkm_file"
+		return 1
+	fi
+
+	local temp_dir
+	temp_dir=$(mktemp -d)
+
+	# Use APKEditor to extract the base APK from the bundle
+	if ! java -jar "$TEMP_DIR/apkeditor.jar" decode -i "$apkm_file" -o "$temp_dir" -f 2>&1; then
+		epr "Failed to decode APKM file: $apkm_file"
+		rm -rf "$temp_dir"
+		return 1
+	fi
+
+	# Check if the base APK exists in the extracted directory
+	if [ -f "$temp_dir/base/dist/base.apk" ]; then
+		cp "$temp_dir/base/dist/base.apk" "$apk_output"
+	elif [ -f "$temp_dir/splits/base.apk" ]; then
+		cp "$temp_dir/splits/base.apk" "$apk_output"
+	elif [ -f "$temp_dir/base.apk" ]; then
+		cp "$temp_dir/base.apk" "$apk_output"
+	else
+		# Try to find any .apk file in the extracted directory
+		local found_apk=$(find "$temp_dir" -name "*.apk" -type f | head -n 1)
+		if [ -n "$found_apk" ]; then
+			cp "$found_apk" "$apk_output"
+		else
+			epr "No APK file found in extracted bundle: $temp_dir"
+			rm -rf "$temp_dir"
+			return 1
+		fi
+	fi
+
+	# Clean up temporary directory
+	rm -rf "$temp_dir"
+
+	# Verify the converted APK is valid
+	if [ ! -f "$apk_output" ]; then
+		epr "APK conversion failed: output file not created at $apk_output"
+		return 1
+	fi
+
+	pr "APKM conversion completed successfully: $apk_output"
+	return 0
+}
+
 merge_splits() {
 	local bundle=$1 output=$2
 	pr "Merging splits"
@@ -539,7 +594,21 @@ build_rv() {
 			fi
 			break
 		done
-		if [ ! -f "$stock_apk" ]; then return 0; fi
+		if [ ! -f "$stock_apk" ]; then
+			# Check if we have an APKM file instead (in case conversion didn't work properly)
+			local apkm_file="${stock_apk%.apk}.apkm"
+			if [ -f "$apkm_file" ]; then
+				pr "Found APKM file, converting to APK: $apkm_file"
+				if convert_apkm_to_apk "$apkm_file" "$stock_apk"; then
+					pr "Successfully converted APKM to APK: $stock_apk"
+				else
+					epr "Failed to convert APKM to APK: $apkm_file"
+					return 0
+				fi
+			else
+				return 0
+			fi
+		fi
 	fi
 	if ! OP=$(check_sig "$stock_apk" "$pkg_name" 2>&1) && ! grep -qFx "ERROR: Missing META-INF/MANIFEST.MF" <<<"$OP"; then
 		epr "$pkg_name not building, apk signature mismatch '$stock_apk': $OP"
@@ -627,7 +696,20 @@ build_rv() {
 		local module_output="${app_name_l}-${rv_brand_f}-magisk-v${version_f}-${arch_f}.zip"
 		pr "Packing module ${table}"
 		cp -f "$patched_apk" "${base_template}/base.apk"
-		if [ "${args[include_stock]}" = true ]; then cp -f "$stock_apk" "${base_template}/${pkg_name}.apk"; fi
+		if [ "${args[include_stock]}" = true ]; then
+			# Ensure stock APK is in proper APK format, not APKM
+			if [ "${stock_apk##*.}" = "apkm" ]; then
+				local apk_output="${stock_apk%.apkm}.apk"
+				if convert_apkm_to_apk "$stock_apk" "$apk_output"; then
+					cp -f "$apk_output" "${base_template}/${pkg_name}.apk"
+				else
+					epr "Failed to convert stock APKM to APK for module, using original APKM (may cause issues)"
+					cp -f "$stock_apk" "${base_template}/${pkg_name}.apk"
+				fi
+			else
+				cp -f "$stock_apk" "${base_template}/${pkg_name}.apk"
+			fi
+		fi
 		pushd >/dev/null "$base_template" || abort "Module template dir not found"
 		zip -"$COMPRESSION_LEVEL" -FSqr "${CWD}/${BUILD_DIR}/${module_output}" .
 		popd >/dev/null || :
@@ -658,4 +740,33 @@ author=j-hc
 description=${4}" >"${6}/module.prop"
 
 	if [ "$ENABLE_MAGISK_UPDATE" = true ]; then echo "updateJson=${5}" >>"${6}/module.prop"; fi
+}
+
+# Function to ensure we have an APK file, converting from APKM if necessary
+ensure_apk_file() {
+	local apk_file=$1
+	local expected_pkg_name=$2
+
+	# If this is an APKM file, convert it to APK
+	if [ "${apk_file##*.}" = "apkm" ]; then
+		local apk_output="${apk_file%.apkm}.apk"
+		pr "Detected APKM file, converting to APK: $apk_file"
+
+		if convert_apkm_to_apk "$apk_file" "$apk_output"; then
+			pr "Successfully converted APKM to APK: $apk_output"
+			# Return the new APK filename through a variable
+			eval "$3='$apk_output'"
+			return 0
+		else
+			epr "Failed to convert APKM to APK: $apk_file"
+			return 1
+		fi
+	elif [ -f "$apk_file" ] && [ "${apk_file##*.}" = "apk" ]; then
+		# File is already an APK
+		eval "$3='$apk_file'"
+		return 0
+	else
+		epr "File not found or unsupported format: $apk_file"
+		return 1
+	fi
 }
