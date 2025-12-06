@@ -10,7 +10,7 @@ parallel-jobs = 1
 enabled = true
 patches-source = "ReVanced/revanced-patches"
 cli-source = "inotia00/revanced-cli"
-build-mode = "both"
+build-mode = "apk"
 arch = "both"
 version = "latest"
 uptodown-dlurl = "https://strava.en.uptodown.com/android"
@@ -20,7 +20,27 @@ uptodown-dlurl = "https://strava.en.uptodown.com/android"
 enabled = true
 patches-source = "ReVanced/revanced-patches"
 cli-source = "inotia00/revanced-cli"
-build-mode = "both"
+build-mode = "apk"
+arch = "both"
+version = "beta"
+uptodown-dlurl = "https://strava.en.uptodown.com/android"
+#apkmirror-dlurl = "https://www.apkmirror.com/apk/strava-inc/strava-run-bike-hike-2"
+
+[strava-module]
+enabled = true
+patches-source = "ReVanced/revanced-patches"
+cli-source = "inotia00/revanced-cli"
+build-mode = "module"
+arch = "both"
+version = "latest"
+uptodown-dlurl = "https://strava.en.uptodown.com/android"
+#apkmirror-dlurl = "https://www.apkmirror.com/apk/strava-inc/strava-run-bike-hike-2"
+
+[strava-module-beta]
+enabled = true
+patches-source = "ReVanced/revanced-patches"
+cli-source = "inotia00/revanced-cli"
+build-mode = "module"
 arch = "both"
 version = "beta"
 uptodown-dlurl = "https://strava.en.uptodown.com/android"
